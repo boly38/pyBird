@@ -1,0 +1,6 @@
+services:
+  py_server:
+    build:
+      context: .
+    ports:
+      - 8000:8000
