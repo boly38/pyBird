@@ -1,6 +1,7 @@
 ### bioclip/predict
 POST http://127.0.0.1:8000/bioclip/predict
 Content-Type: application/json
+PRIVATE-KEY: blahblah23
 
 {"url": "https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?cs=srgb&dl=pexels-pixabay-326900.jpg&fm=jpg"}
 
