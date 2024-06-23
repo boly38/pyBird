@@ -22,6 +22,9 @@ python -m pip install --upgrade pip
 ```
 
 ### Step 2) Project dependencies
+
+Note: around 2GB disk will be used
+
 ````bash
 pip install -r ./requirements.txt
 pip install git+https://github.com/Imageomics/pybioclip

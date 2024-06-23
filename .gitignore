@@ -1,4 +1,6 @@
 .idea
 winvenv/
 venv/
- __pycache__/
+__pycache__/
+# dont version docker mvp for now : not a good choice, too huge deps
+docker/
