@@ -23,6 +23,22 @@ make localCall
 ````
 - to call API, you could also rely on Intellij httpClient [predict.http](./httpClient/predict.http)
 
+## How to run via docker and compose
+
+Requirement: python and docker
+
+````bash
+# build container
+make build
+#  start container
+make start
+# make some API call
+make localCall
+# check if container is running
+make ps
+# stop and remove container
+make down
+````
 
 ## How to "secure" the endpoint
 
