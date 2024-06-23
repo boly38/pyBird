@@ -14,6 +14,15 @@ help: ## This help.
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo ">> make info << for more details"
 
+localTry: ## cmd line test
+	python ./try.py
+
+localStart: ## start pyBird API without docker
+	python -m flask run --host=0.0.0.0 --port=8000
+
+localCall: ## ask predict using local API
+	curl -X POST -H "Content-Type: application/json" -d '{"url": "https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?cs=srgb&dl=pexels-pixabay-326900.jpg&fm=jpg"}' http://127.0.0.1:8000/bioclip/predict
+
 start: ## start pyBird compose
 	${DOCKER_COMPOSE} -p ${DOCKER_PROJECT} up -d
 # stop: ## stop
