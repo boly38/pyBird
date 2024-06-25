@@ -29,3 +29,28 @@ Note: around 2GB disk will be used
 pip install -r ./requirements.txt
 pip install git+https://github.com/Imageomics/pybioclip
 ````
+
+
+### Tips to uninstall
+
+````bash
+df -kh
+
+# docker : clean unused resources
+docker image prune
+docker volume prune
+
+# pip : uninstall deps
+pip info
+du -khs ~/.cache/pip
+
+pip uninstall -r requirements.txt -y
+pip cache purge
+pip info
+
+# remove HF cache - https://huggingface.co/docs/huggingface_hub/guides/manage-cache#clean-cache-from-the-terminal
+du -khs ~/.cache/huggingface
+# rm ? :)
+
+du -kh
+````
